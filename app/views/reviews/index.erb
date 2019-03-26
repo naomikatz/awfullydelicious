@@ -1,0 +1,9 @@
+
+<h1><%=@food.name%></h1>
+<%@food.reviews.each do |r|%>
+<%=image_tag r.image%><br>
+<%=r.title%><br>
+<%=r.content%><br>
+<%=r.rating%><br>
+<%=r.foodie.username%><br>
+<%end%>

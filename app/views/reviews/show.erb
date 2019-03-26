@@ -1,0 +1,10 @@
+<%= image_tag @review.image %><br>
+<%= @review.title %><br>
+<%= @review.category.name %><br>
+<%= @review.food.name %><br>
+<%= @review.food.spot_name %><br>
+<%= @review.rating %><br>
+<%= @review.content %><br>
+<%= @review.foodie.username %>
+<%= button_to "update", @review, method: :patch %>
+<%= button_to "delete", @review, method: :delete, data: {confirm: "Are you sure you want to delete?"} %>

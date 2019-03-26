@@ -1,0 +1,12 @@
+<h1><%= @food.name %></h1>
+<h3><%= @food.spot_name %></h3>
+<h4><%= @food.address %></h4>
+
+
+<% @food.reviews.each do |r| %>
+<%= image_tag r.image %><br>
+<%= r.title %><br>
+<%= r.rating %><br>
+<%= r.content %><br>
+<%= r.foodie.username %><br>
+<% end %>

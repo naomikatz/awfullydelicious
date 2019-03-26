@@ -1,0 +1,6 @@
+<h1>Welcome to Awfully Delicious</h1>
+
+<%= form_for @food  do |f| %>
+  <%= f.label :state %>
+  <%= f.collection_select :location_id, @locations, :id, :state, prompt: true%>
+<% end %>
