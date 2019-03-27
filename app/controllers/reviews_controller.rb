@@ -26,16 +26,19 @@ class ReviewsController < ApplicationController
   end
 
   def edit
+    @food = @review.food
+    @foodies = Foodie.all
   end
 
   def update
-    @review = Review.update(review_params)
+    @review.update(review_params)
     redirect_to review_path(@review)
   end
 
   def destroy
+
     @review.destroy
-    redirect_to reviews_path
+    redirect_to foods_path
   end
 
   private

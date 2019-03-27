@@ -2,7 +2,7 @@ class FoodsController < ApplicationController
   before_action :find_food, only: [:show, :destroy]
 
   def index
-    @foods = Food.all
+    @foods = Food.search(params[:search])
     @reviews = Review.all
   end
 
@@ -19,8 +19,9 @@ class FoodsController < ApplicationController
   end
 
   def show
-    @review = @food.reviews
+
   end
+
 
   def destroy
     @food.destroy
@@ -33,6 +34,6 @@ class FoodsController < ApplicationController
   end
 
   def food_params
-    params.require(:food).permit(:name, :spot_name, :address, :location_id, :category_id, :like_count)
+    params.require(:food).permit(:name, :spot_name, :address, :location_id, :category_id, :like_count, :search)
   end
 end

@@ -10,10 +10,17 @@
 mica = Foodie.find_or_create_by(username: 'Meeks-a-Geek')
 naomi = Foodie.find_or_create_by(username: 'NayNay')
 
-get_that_green = Category.find_or_create_by(name: 'Get that Green')
-junk_in_the_trunk = Category.find_or_create_by(name: 'Junk in the Trunk')
+ny_ny = Location.find_or_create_by(city: "Manhattan", state: "New York")
+bk_ny = Location.find_or_create_by(city: "Brooklyn", state: "New York")
+qns_ny = Location.find_or_create_by(city: "Queens", state: "New York")
+bx_ny = Location.find_or_create_by(city: "Bronx", state: "New York")
+si_ny = Location.find_or_create_by(city: "Staten Island", state: "New York")
 
-ny_ny = Location.find_or_create_by(city: "New York", state: "New York")
-
-vanilla_bean_donut = Food.find_or_create_by(name: "Vanilla Bean Donut", like_count: 0, category: junk_in_the_trunk, address: "110 Wall Street", spot_name: "Doughnut Plant", location: ny_ny)
-guac_burger = Food.find_or_create_by(name: "Guac Burger", like_count: 0, category: get_that_green, address: "110 Wall Street", spot_name: "by Chloe", location: ny_ny)
+donuts = Category.find_or_create_by(name: "Donuts")
+cake = Category.find_or_create_by(name: "Cake")
+ice_cream = Category.find_or_create_by(name: "Ice Cream")
+candy = Category.find_or_create_by(name: "Candy")
+pastries = Category.find_or_create_by(name: "Pastries")
+cookies = Category.find_or_create_by(name: "Cookies")
+cupcakes = Category.find_or_create_by(name: "Cupcakes")
+pie = Category.find_or_create_by(name: "Pie")

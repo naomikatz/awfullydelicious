@@ -2,11 +2,13 @@
 <h3><%= @food.spot_name %></h3>
 <h4><%= @food.address %></h4>
 
+<%= link_to "Add a Review", new_food_review_path(@food) %>
 
 <% @food.reviews.each do |r| %>
-<%= image_tag r.image %><br>
+<%= link_to image_tag(r.image), review_path(r) %><br>
 <%= r.title %><br>
 <%= r.rating %><br>
 <%= r.content %><br>
 <%= r.foodie.username %><br>
+
 <% end %>
