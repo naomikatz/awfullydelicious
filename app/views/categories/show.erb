@@ -1,0 +1,4 @@
+<h1><%= @category.name %></h1>
+<% @category.foods.each do |f| %>
+<%= link_to image_tag(f.reviews.first.image), food_path(f) %>
+<% end %>

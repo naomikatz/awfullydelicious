@@ -2,7 +2,6 @@
 <% @categories.each do |c| %>
 <%= link_to c.name, category_path(c) %><br>
 <% c.foods.each do |f|%>
-<%= link_to f.name, food_path(f) %><br>
-<%=image_tag f.reviews.first.image %><br>
+<%= link_to image_tag(f.reviews.first.image), food_path(f) %><br>
 <% end %>
 <% end %>

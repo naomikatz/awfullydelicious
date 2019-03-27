@@ -3,7 +3,7 @@ class ReviewsController < ApplicationController
 
   def index
     @food = Food.find(params[:id])
-    @review = @food.review
+    @review = @food.reviews
 
   end
 

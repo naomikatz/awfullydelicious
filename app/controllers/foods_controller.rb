@@ -14,7 +14,8 @@ class FoodsController < ApplicationController
 
   def create
     @food = Food.create(food_params)
-    redirect_to food_path(@food)
+    # @review = Review.create(title: "I need a title", content: "I need content", rating: 0, food_id: @food.id, foodie_id: 1).image.attach(io: File.open('/Users/naomikatz/Desktop/donut.jpeg'), filename: 'donut.jpeg')
+    redirect_to new_food_review_path(@food)
   end
 
   def show
