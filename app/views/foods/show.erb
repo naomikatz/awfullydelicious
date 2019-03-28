@@ -1,22 +1,116 @@
-<h1><%= @food.name %></h1>
 
-<div class="card" style="width: 65rem;">
-  <%= image_tag @food.image, class: "card-img-top" %>
-  <div class="card-body">
-    <h5 class="card-title"><%= @food.spot_name %></h5>
-    <p class="card-text"><%= @food.address %></p>
-    <%= button_to "Edit #{@food.name}", edit_food_path(@food), method: 'get', class: 'btn btn-primary' %>
-    <%= button_to "Add a Review", new_food_review_path(@food), method: 'get', class: 'btn btn-primary' %>
+<div class="food-container">
+  <%= image_tag @food.image, class: 'food-show-image' %>
+  <h1><%= @food.name %></h1>
+  <p>Avg rating</p>
+  <span class="spot_name"><%= @food.spot_name %></span><br>
+  <span class="address"><%= @food.address %></span>
+  <%= button_to "Edit #{@food.name}", edit_food_path(@food), method: 'get', class: 'ui blue button mini' %>
+  <%= button_to "Add a Review", new_food_review_path(@food), method: 'get', class: 'ui blue button mini' %>
+</div>
+
+
+
+<div class='ui cards container'>
+  <% @food.reviews.each do |r| %>
+    <div class="ui raised link card">
+      <div class="content">
+        <div class="header"><%= r.title %></div>
+        <div class="meta">
+          <span class="category"><%= r.rating %></span>
+        </div>
+        <div class="description">
+          <p><%= r.content %></p>
+        </div>
+      </div>
+      <div class="extra content">
+        <div class="right floated">
+          By: <%= r.foodie.username %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+
+  <%#  REMOVE LATER%>
+  <div class="ui raised link card">
+    <div class="content">
+      <div class="header">Cute Dog</div>
+      <div class="meta">
+        <span class="category">Animals</span>
+      </div>
+      <div class="description">
+        <p></p>
+      </div>
+    </div>
+    <div class="extra content">
+      <div class="right floated author">
+        <img class="ui avatar image" src="/images/avatar/small/matt.jpg"> Matt
+      </div>
+    </div>
   </div>
-
-  <ul class="list-group list-group-flush">
-    <% @food.reviews.each do |r| %>
-      <li class="list-group-item">
-        <h3><%= r.title %></h3>>
-        <div class='rating'><%= r.rating %></div>
-        <%= r.content %><br>
-        <%= r.foodie.username %><br>
-      </li>
-    <% end %>
-  </ul>
+  <div class="ui raised link card">
+    <div class="content">
+      <div class="header">Cute Dog</div>
+      <div class="meta">
+        <span class="category">Animals</span>
+      </div>
+      <div class="description">
+        <p></p>
+      </div>
+    </div>
+    <div class="extra content">
+      <div class="right floated author">
+        <img class="ui avatar image" src="/images/avatar/small/matt.jpg"> Matt
+      </div>
+    </div>
+  </div>
+  <div class="ui raised link card">
+    <div class="content">
+      <div class="header">Cute Dog</div>
+      <div class="meta">
+        <span class="category">Animals</span>
+      </div>
+      <div class="description">
+        <p></p>
+      </div>
+    </div>
+    <div class="extra content">
+      <div class="right floated author">
+        <img class="ui avatar image" src="/images/avatar/small/matt.jpg"> Matt
+      </div>
+    </div>
+  </div>
+  <div class="ui raised link card">
+    <div class="content">
+      <div class="header">Cute Dog</div>
+      <div class="meta">
+        <span class="category">Animals</span>
+      </div>
+      <div class="description">
+        <p></p>
+      </div>
+    </div>
+    <div class="extra content">
+      <div class="right floated author">
+        <img class="ui avatar image" src="/images/avatar/small/matt.jpg"> Matt
+      </div>
+    </div>
+  </div>
+  <div class="ui raised link card">
+    <div class="content">
+      <div class="header">Cute Dog</div>
+      <div class="meta">
+        <span class="category">Animals</span>
+      </div>
+      <div class="description">
+        <p></p>
+      </div>
+    </div>
+    <div class="extra content">
+      <div class="right floated author">
+        <img class="ui avatar image" src="/images/avatar/small/matt.jpg"> Matt
+      </div>
+    </div>
+  </div>
 </div>

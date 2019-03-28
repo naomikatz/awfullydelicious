@@ -1,213 +1,24 @@
 
-
-
-
- // Custom bootstrap variables must be set or imported *before* bootstrap.
-@import "bootstrap";
-
-.image-gallery{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 2%;
-}
-
-.link-image {
-  width: 100%;
-}
-
 .food-image {
   width: 100%;
+  height: 300px;
 }
 
-.rating {
-  color: purple;
-}
-
-.card {
-        margin: 0 auto; /* Added */
-        float: none; /* Added */
-        margin-bottom: 10px; /* Added */
-}
-
-
-
-
-//
-//
-html {
-  height: 100%;
-}
-
-.registration-bg {
-  padding-top: 4em;
-  height: 100%;
-  background-image: image-url('regbackg.jpg');
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-//
-.log-in{
-  margin-left: auto;
-  margin-right: auto;
-  text-align:center;
-  border: none;
-}
-
-  .login-bg {
-    padding-top: 4em;
-    height: 100%;
-    background-image: image-url('loginbg.jpg');
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-
-//
-// .panel {
-//   border-radius: 8px;
-// }
-//
-// .panel-heading{
-//   h1 {
-//     text-align: center;
-//   }
-// }
-//
-// body {
-//   background-color: #fafafa;
-//   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-// }
-//
-// /* ## NAVBAR CUSTOMISATIONS ## */
-//
-.navbar-brand {
-  a {
-    color: #125688;
-  }
-}
-
-.navbar-default {
-  background-color: #fff;
-  height: 54px;
-  .navbar-nav li a {
-    color: #125688;
-  }
-}
-
-.navbar-container {
-  width: 70%;
-  margin: 0 auto;
-}
-//
-// /* ## POST CUSTOMISATIONS ## */
-//
 .foods-wrapper {
-  padding-top: 30px;
-  margin: 0 auto;
-  max-width: 642px;
-  width: 100%;
-}
-//
-// .food {
-//   width: 50%;
-//   background-color: #fff;
-//   border-color: #edeeee;
-//   border-style: solid;
-//   border-radius: 3px;
-//   border-width: 1px;
-//   margin-bottom: 60px;
-// }
-// .food-head {
-//     flex-direction: row;
-//     height: 64px;
-//     padding-left: 24px;
-//     padding-right: 24px;
-//     padding-top: 2px;
-//     color: #125688;
-//     font-size: 15px;
-//     line-height: 18px;
-// }
-// //
-// //     .username, {
-// //       display: inline;
-// //     }
-// //
-// //     .username {
-// //       font-weight: 500;
-//     // }
-//
-//
-
-//
-//
-// // .food-bottom {
-// //   .username, .review-content {
-// //     display: inline;
-// //   }
-// //   .caption {
-// //     margin-bottom: 7px;
-// //   }
-// //   .username {
-// //     font-weight: 500;
-// //     margin-right: 0.3em;
-// //     color: #125688;
-// //     font-size: 15px;
-//   // }
-//
-//   #review {
-//     margin-top: 7px;
-//     .user-name {
-//       font-weight: 500;
-//       margin-right: 0.3em;
-//     }
-//     .delete-review {
-//       float: right;
-//       color: #515151;
-//     }
-//   }
-//   margin-bottom: 7px;
-//   padding-top: 24px;
-//   padding-left: 24px;
-//   padding-right: 24px;
-//   padding-bottom: 10px;
-//   font-size: 15px;
-//   line-height: 18px;
-// }
-//
-// .review_content {
-//   font-size: 15px;
-//   line-height: 18px;
-//   border: medium none;
-//   width: 100%;
-//   color: #4B4F54;
-// }
-//
-
-//
-//
-// /* ## Wrapper and styling for the new and edit views ## */
-//
-.form-wrapper {
-  width: 60%;
-  margin: 20px auto;
-  background-color: #fff;
-  padding: 40px;
-  border: 1px solid #eeefef;
-  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-.edit-links {
-  margin-top: 20px;
-    margin-bottom: 40px;
-}
-//
-.navbar {
-  margin-bottom: 0px;
+.food-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-.alert {
-    margin-bottom: 0px;
+.food-show-image {
+  width: 300px;
+  height: 300px;
 }

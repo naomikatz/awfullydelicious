@@ -1,19 +1,20 @@
-<div class="foods-wrapper row">
-  <h1>Awfully Delicious</h1>
-  <h4>The Best Sweets in the 5 Borroughs of NY</h4>
-  <h6>Get Some Junk in Yo Trunk!</h6>
+<div class="foods-wrapper">
+  <h3>Get Some Junk in Yo Trunk!</h3>
 
-  <%= form_tag(foods_path, method: :get) do %>
-  <%= text_field_tag(:search, params[:search]) %>
-  <%= submit_tag ("Search Foods") %>
+  <%= form_tag(foods_path, method: :get, class: 'ui form') do %>
+  <div class="inline field">
+    <%= text_field_tag(:search, params[:search]) %>
+      <%= submit_tag ("Search Foods"), class: 'ui blue button' %>
+  </div>
+
   <% end %>
 </div>
 
-  <%= link_to "Add a food", new_food_path %></br>
 
-
-  <div class="image-gallery">
+  <div class="ui grid container">
     <% @foods.each do |f| %>
-      <%= link_to(image_tag(f.image, class: "food-image"), food_path(f), class: "link-image") %>
+      <div class="four wide column">
+        <%= link_to(image_tag(f.image, class: "food-image"), food_path(f)) %>
+      </div>
     <% end %>
   </div>
