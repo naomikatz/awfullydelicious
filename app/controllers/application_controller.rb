@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 
-  before_action :authorized #lock down this whole app
+  before_action :authorized, except: [:create, :new] #lock down this whole app
   helper_method :current_foodie #i can call current_user from a view
 
   def current_foodie

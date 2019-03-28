@@ -5,6 +5,7 @@ class Food < ApplicationRecord
   belongs_to :location
   has_many :foodies, through: :reviews
   has_many :foodies, through: :favorites
+  has_one_attached :image
 
   def self.search(search)
     if search

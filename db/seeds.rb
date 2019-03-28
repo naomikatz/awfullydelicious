@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-mica = Foodie.find_or_create_by(username: 'Meeks-a-Geek')
-naomi = Foodie.find_or_create_by(username: 'NayNay')
+test1 = Foodie.find_or_create_by(username: 'test1', password_digest: "12345")
+
 
 ny_ny = Location.find_or_create_by(city: "Manhattan", state: "New York")
 bk_ny = Location.find_or_create_by(city: "Brooklyn", state: "New York")
@@ -24,3 +24,10 @@ pastries = Category.find_or_create_by(name: "Pastries")
 cookies = Category.find_or_create_by(name: "Cookies")
 cupcakes = Category.find_or_create_by(name: "Cupcakes")
 pie = Category.find_or_create_by(name: "Pie")
+
+
+birthday_cake = Food.find_or_create_by(name: "Birthday Cake", like_count: 0, spot_name: "Milk", address: "251 E 13th St, New York, NY 10003", location: ny_ny, category: cake)
+birthday_cake.image.attach(io: File.open('app/assets/images/defaultimage.jpg'), filename: 'defaultimage.jpg', content_type: 'image/jpeg')
+
+
+birthdaycakereview = Review.find_or_create_by(title: "Go shorty...", rating: 4, content: "get dat cake", foodie: test1, food: birthday_cake)

@@ -1,11 +1,13 @@
 <h1><%= @food.name %></h1>
+<%= image_tag @food.image %>
 <h3><%= @food.spot_name %></h3>
 <h4><%= @food.address %></h4>
 
+<%= link_to "Edit #{@food.name}", edit_food_path(@food) %></br>
 <%= link_to "Add a Review", new_food_review_path(@food) %>
 
 <% @food.reviews.each do |r| %>
-<%= link_to image_tag(r.image), review_path(r) %><br>
+<%= link_to (r.title), review_path(r) %><br>
 <%= r.title %><br>
 <%= r.rating %><br>
 <%= r.content %><br>

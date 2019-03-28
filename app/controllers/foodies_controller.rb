@@ -12,7 +12,7 @@ class FoodiesController < ApplicationController
       @foodie = Foodie.create(foodie_params)
       if @foodie.valid?
         session[:foodie_id] = @foodie.id
-        redirect_to @foodie
+        redirect_to foods_path
       else
         flash[:errors] = @foodie.errors.full_messages
         redirect_to new_foodie_path

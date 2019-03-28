@@ -10,8 +10,6 @@
   <%= f.text_area :content %><br>
   <%= f.label :foodie %>
   <%= f.collection_select :foodie_id, @foodies, :id, :username, prompt: true %><br>
-  <%= f.file_field :image %>
-  <%= f.hidden_field(:food_id, :value => @food.id)%>
   <%= f.submit %>
 
 <% end %>

@@ -21,7 +21,6 @@ class ReviewsController < ApplicationController
   def create
     @food = Food.find(params[:id])
     @review = Review.create(review_params)
-    @review.image.attach(params[:review][:image])
     redirect_to food_reviews_path(@food)
   end
 
@@ -47,6 +46,6 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.require(:review).permit(:title, :content, :rating, :food_id, :foodie_id, :image)
+    params.require(:review).permit(:title, :content, :rating, :food_id, :foodie_id)
   end
 end

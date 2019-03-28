@@ -7,9 +7,9 @@
 <%= submit_tag ("Search Foods") %>
 <% end %>
 
-
+<%= link_to "Add a food", new_food_path %></br>
 <% @foods.each do |f| %>
-<%= link_to image_tag(f.reviews.first.image), food_path(f) %>
+<%= link_to image_tag(f.image), food_path(f) %>
 <% end %>
 
 
