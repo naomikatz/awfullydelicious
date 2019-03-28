@@ -8,8 +8,7 @@
   <%= f.number_field :rating, class: :number_field, step: :any %><br>
   <%= f.label :content %>
   <%= f.text_area :content %><br>
-  <%= f.label :foodie %>
-  <%= f.collection_select :foodie_id, @foodies, :id, :username, prompt: true %><br>
+  <%= f.hidden_field(:foodie_id, :value => current_foodie.id)%><br>
   <%= f.hidden_field(:food_id, :value => @food.id)%>
   <%= f.submit %>
 

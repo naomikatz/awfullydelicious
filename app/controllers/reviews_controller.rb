@@ -21,7 +21,14 @@ class ReviewsController < ApplicationController
 
   def create
     @food = Food.find(params[:id])
-    redirect_to food_path(@food)
+    @review = Review.create(review_params)
+    if @review.save
+      flash[:success] = "Your review has been created!"
+      redirect_to food_path(@food)
+    else
+      flash[:alert] = "Your review couldn't be created, please check the form."
+      render :new
+    end
   end
 
   def edit

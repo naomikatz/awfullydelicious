@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-test1 = Foodie.find_or_create_by(username: 'test1', password_digest: "12345")
+
 
 
 ny_ny = Location.find_or_create_by(city: "Manhattan", state: "New York")
