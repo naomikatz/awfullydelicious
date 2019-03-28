@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   resources :reviews, except: [:index, :create]
   resources :foodies, only: [:show, :new, :create, :destroy]
 
-  get "/foods/:id/newreview", to:"reviews#newreview", :as => "new_food_review"
+  get "/foods/:id/newreview", to:"reviews#new", :as => "new_food_review"
   get "/foods/:id/reviews", to:"reviews#index", :as => "food_reviews"
-  post "/foods/:id/reviews", to:"reviews#create"
+  post "/foods/:id", to:"reviews#create"
 
 
   get '/login', to: 'sessions#new', as: 'login'

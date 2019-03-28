@@ -8,9 +8,10 @@ class ReviewsController < ApplicationController
   end
 
   def show
+    @food = @review.food
   end
 
-  def newreview
+  def new
     @food = Food.find(params[:id])
     @review = Review.new
     @categories = Category.all
@@ -20,8 +21,7 @@ class ReviewsController < ApplicationController
 
   def create
     @food = Food.find(params[:id])
-    @review = Review.create(review_params)
-    redirect_to food_reviews_path(@food)
+    redirect_to food_path(@food)
   end
 
   def edit

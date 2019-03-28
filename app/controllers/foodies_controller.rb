@@ -9,7 +9,7 @@ class FoodiesController < ApplicationController
     end
 
     def create
-      @foodie = Foodie.create(foodie_params)
+      @foodie = Foodie.create(sign_up_params)
       if @foodie.valid?
         session[:foodie_id] = @foodie.id
         redirect_to foods_path
@@ -29,9 +29,10 @@ class FoodiesController < ApplicationController
 
       private
 
-      def foodie_params
+      def sign_up_params
         params.require(:foodie).permit(:username, :password)
       end
+
 
 
 end

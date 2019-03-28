@@ -1,15 +1,27 @@
-<h1>Login</h1>
-<%= link_to "Create an Account", new_foodie_path %>
 
 <h4><%= flash[:notice] %></h4>
 
 <!-- form will POST to '/login' -->
-<%= form_tag(login_path) do %>
-  <%= label_tag :username %>
-  <%= text_field_tag :username %>
 
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
 
-  <%= submit_tag 'Login' %>
-<% end %>
+<div class="login-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <div class="log-in panel">
+          <div class="panel-heading">
+            <h2>Log in</h2>
+          </div>
+           <%= form_tag(login_path) do %>
+           <div class="panel-body">
+             <%= text_field_tag :username, 'Username', input_html: { class: 'input-lg' }  %>
+             <%= text_field_tag :password, 'Password', input_html: { class: 'input-lg' }  %>
+             <%= submit_tag "Log In", class: 'btn-lg btn-info btn-block' %>
+             <% end %>
+             <%= link_to "Create an Account", new_foodie_path %>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

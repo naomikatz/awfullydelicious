@@ -4,5 +4,5 @@
 <%=r.title%><br>
 <%=r.content%><br>
 <%=r.rating%><br>
-<%=r.foodie.username%><br>
+<%=link_to r.foodie.username, foodie_path(@foodie)%><br>
 <%end%>

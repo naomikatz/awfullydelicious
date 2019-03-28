@@ -1,5 +1,3 @@
-<h1>Sign up</h1>
-
 <% if flash[:errors] %>
   <% flash[:errors].each do |err| %>
     <%= err %>
@@ -8,11 +6,25 @@
 
 <h4><%= flash[:notice] %></h4>
 
-<%= form_for @foodie do |f| %>
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-  <%= f.label :password %>
-  <%= f.text_field :password %>
 
-  <%= f.submit %>
-<% end %>
+
+<div class="registration-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <div class="log-in panel">
+          <div class="panel-heading">
+            <h2> Sign Up </h2>
+            <%= form_for @foodie do |f| %>
+            <div class="panel-body">
+              <%= f.text_field :username, required: true, label: false, placeholder: 'Username', input_html: { class: 'input-lg' }  %>
+              <%= f.text_field :password, required: true, label: false, placeholder: 'Password', input_html: { class: 'input-lg' }  %>
+              <%= f.submit "Sign up", class: 'btn-lg btn-info btn-block' %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

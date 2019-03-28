@@ -1,15 +1,16 @@
 <h1>Make a Review</h1>
 
-<%= form_for @review, :url => food_reviews_path(@food) do |f| %>
+<%= form_for @review, :url => food_path(@food) do |f| %>
 
   <%= f.label :title %>
   <%= f.text_field :title %><br>
   <%= f.label :rating %>
-  <%= f.number_field :rating, class: :text_field, step: :any %><br>
+  <%= f.number_field :rating, class: :number_field, step: :any %><br>
   <%= f.label :content %>
   <%= f.text_area :content %><br>
   <%= f.label :foodie %>
   <%= f.collection_select :foodie_id, @foodies, :id, :username, prompt: true %><br>
+  <%= f.hidden_field(:food_id, :value => @food.id)%>
   <%= f.submit %>
 
 <% end %>
