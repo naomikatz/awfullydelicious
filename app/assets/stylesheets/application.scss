@@ -11,6 +11,26 @@
   grid-gap: 2%;
 }
 
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.column {
+  float: left;
+  width: 75%;
+  padding: 5px;
+}
+
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+
 .link-image {
   width: 100%;
 }

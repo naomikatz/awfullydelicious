@@ -1,7 +1,6 @@
 <div class="foods-wrapper row">
-  <h1>Awfully Delicious</h1>
-  <h4>The Best Sweets in the 5 Borroughs of NY</h4>
-  <h6>Get Some Junk in Yo Trunk!</h6>
+
+  <h6>Get Some Junk in Yo Trunk!</h6><br>
 
   <%= form_tag(foods_path, method: :get) do %>
   <%= text_field_tag(:search, params[:search]) %>
@@ -9,11 +8,20 @@
   <% end %>
 </div>
 
-  <%= link_to "Add a food", new_food_path %></br>
 
 
-  <div class="image-gallery">
-    <% @foods.each do |f| %>
-      <%= link_to(image_tag(f.image, class: "food-image"), food_path(f), class: "link-image") %>
-    <% end %>
+
+<div class="row">
+  <div class="column">
+  <div class="col-md-12">
+    <div id="mdb-lightbox-ui"></div>
+      <div class="mdb-lightbox no-margin">
+        <figure class="col-md-4">
+          <% @foods.each do |f| %>
+          <%= link_to(image_tag(f.image, class: "food-image"), food_path(f), class: "link-image") %>
+          <% end %>
+        </a>
+      </figure>
+    </div>
   </div>
+</div>
