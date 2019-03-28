@@ -1,21 +1,20 @@
-<!DOCTYPE html>
-<%= render 'layouts/navbar' %>
 <html>
   <head>
-    <title>Awfullydelicious</title>
+    <title>Awefully Delicious</title>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </head>
-
-  <body>
-    <%= yield %>
-    <div class="container">
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, class: [:alert, alert_for(name)] %>
-      <% end %>
-    </div>
-  </body>
 </html>
+<body>
+  <%= render 'layouts/navbar' %>
+  <% flash.each do |name, msg| %>
+    <div class="container"></div>
+    <%= content_tag :div, msg, class: [:alert, alert_for(name)] %>
+  <% end %>
+  <%= yield %>
+</body>
