@@ -1,18 +1,32 @@
+<div class="ui raised very padded text container segment">
+
 <h1>Create a Food</h1>
 
-<%= form_for @food do |f| %>
-
+<%= form_for @food, html: {class: 'ui form'} do |f| %>
+  <div class="field">
   <%= f.label :name %>
   <%= f.text_field :name %>
+  </div>
+  <div class="field">
   <%= f.label :spot_name %>
   <%= f.text_field :spot_name %>
+  </div>
+  <div class="field">
   <%= f.label :address %>
   <%= f.text_field :address %>
+  </div>
+  <div class="field">
   <%= f.label :category %>
   <%= f.collection_select :category_id, @categories, :id, :name, prompt: true %>
+  </div>
+  <div class="field">
   <%= f.label :location %>
   <%= f.collection_select :location_id, @locations, :id, :city, prompt: true %>
+  </div>
+  <div class="field">
+    <%= f.label :image %>
   <%= f.file_field :image %>
   <%= f.hidden_field(:food_id, :value => @food.id)%>
-  <%= f.submit %>
+  </div>
+  <%= f.submit class: 'ui blue button' %>
 <% end %>
