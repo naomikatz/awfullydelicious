@@ -9,7 +9,6 @@ class FoodiesController < ApplicationController
     end
 
     def create
-      byebug
       @foodie = Foodie.create(sign_up_params)
       if @foodie.valid?
         session[:foodie_id] = @foodie.id
