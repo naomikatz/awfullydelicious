@@ -17,9 +17,6 @@
   <div class="text-center edit-links">
     <%= button_to "Edit Review", edit_review_path(@review), method: 'get', class: 'ui black button mini' %>
     <%= button_to "delete", @review, method: :delete, class: 'ui black button mini', data: {confirm: "Are you sure you want to delete?"} %>
-  <%else%>
-  .text-center.edit-links
-        <%=link_to "Cancel", food_reviews_path(@food)%>
   </div>
 <% end %>
 <div class="extra content">
