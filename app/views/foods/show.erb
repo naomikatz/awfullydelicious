@@ -2,7 +2,7 @@
 <div class="food-container">
   <%= image_tag @food.image, class: 'food-show-image' %>
   <h1><%= @food.name %></h1>
-  <p>Avg rating</p>
+  <p>Avg Rating: 4.7</p>
   <span class="spot_name"><%= @food.spot_name %></span><br>
   <span class="address"><%= @food.address %></span>
   <%= button_to "Edit #{@food.name}", edit_food_path(@food), method: 'get', class: 'ui black button mini' %>
@@ -30,87 +30,3 @@
       </div>
     </div>
   <% end %>
-
-
-  <%#  REMOVE LATER%>
-  <div class="ui raised link card">
-    <div class="content">
-      <div class="header">Cute Dog</div>
-      <div class="meta">
-        <span class="category">Animals</span>
-      </div>
-      <div class="description">
-        <p></p>
-      </div>
-    </div>
-    <div class="extra content">
-      <div class="right floated author">
-        <img class="ui avatar image" src="/images/avatar/small/matt.jpg"> Matt
-      </div>
-    </div>
-  </div>
-  <div class="ui raised link card">
-    <div class="content">
-      <div class="header">Cute Dog</div>
-      <div class="meta">
-        <span class="category">Animals</span>
-      </div>
-      <div class="description">
-        <p></p>
-      </div>
-    </div>
-    <div class="extra content">
-      <div class="right floated author">
-        <img class="ui avatar image" src="/images/avatar/small/matt.jpg"> Matt
-      </div>
-    </div>
-  </div>
-  <div class="ui raised link card">
-    <div class="content">
-      <div class="header">Cute Dog</div>
-      <div class="meta">
-        <span class="category">Animals</span>
-      </div>
-      <div class="description">
-        <p></p>
-      </div>
-    </div>
-    <div class="extra content">
-      <div class="right floated author">
-        <img class="ui avatar image" src="/images/avatar/small/matt.jpg"> Matt
-      </div>
-    </div>
-  </div>
-  <div class="ui raised link card">
-    <div class="content">
-      <div class="header">Cute Dog</div>
-      <div class="meta">
-        <span class="category">Animals</span>
-      </div>
-      <div class="description">
-        <p></p>
-      </div>
-    </div>
-    <div class="extra content">
-      <div class="right floated author">
-        <img class="ui avatar image" src="/images/avatar/small/matt.jpg"> Matt
-      </div>
-    </div>
-  </div>
-  <div class="ui raised link card">
-    <div class="content">
-      <div class="header">Cute Dog</div>
-      <div class="meta">
-        <span class="category">Animals</span>
-      </div>
-      <div class="description">
-        <p></p>
-      </div>
-    </div>
-    <div class="extra content">
-      <div class="right floated author">
-        <img class="ui avatar image" src="/images/avatar/small/matt.jpg"> Matt
-      </div>
-    </div>
-  </div>
-</div>
