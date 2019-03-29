@@ -1,21 +1,30 @@
-
-<%= @review.title %><br>
-<%= @review.food.category.name %><br>
-<%= @review.food.name %><br>
+<div class='ui cards container'>
+  <div class="ui raised link card">
+    <div class="content">
+      <div class="header">
+<%= @review.title %><br></div>
+  <div class="meta">
+<span class="category"><%= @review.food.category.name %><br></span>
+</div>
+<div class="description"><%= @review.food.name %><br>
+  </div>
 <%= @review.food.spot_name %><br>
 <%= @review.rating %><br>
-<%= @review.content %><br>
-<%= @review.foodie.username %>
-<%= button_to "Edit", edit_review_path(@review), method: :get %>
-<%= button_to "delete", @review, method: :delete, data: {confirm: "Are you sure you want to delete?"} %>
+<%= @review.content %><br></div>
+
 
 <% if @review.foodie.id == current_foodie.id %>
   <div class="text-center edit-links">
-    <%= link_to "Cancel", food_reviews_path(@food) %>
-    <%= link_to "Edit Review", edit_review_path(@review), method: :get %>
-    <%= button_to "delete", @review, method: :delete, data: {confirm: "Are you sure you want to delete?"} %>
+    <%= button_to "Edit Review", edit_review_path(@review), method: 'get', class: 'ui black button mini' %>
+    <%= button_to "delete", @review, method: :delete, class: 'ui black button mini', data: {confirm: "Are you sure you want to delete?"} %>
   <%else%>
   .text-center.edit-links
         <%=link_to "Cancel", food_reviews_path(@food)%>
   </div>
 <% end %>
+<div class="extra content">
+  <div class="right floated">
+<%= @review.foodie.username %>
+</div>
+</div>
+</div>

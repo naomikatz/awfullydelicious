@@ -1,15 +1,24 @@
+<div class="ui raised very padded text container segment">
+
 <h1>Edit a Review</h1>
 
-<%= form_for @review do |f| %>
-
+<%= form_for @review, html: {class: 'ui form'} do |f| %>
+  <div class="field">
   <%= f.label :title %>
   <%= f.text_field :title %><br>
+  </div>
+  <div class="field">
   <%= f.label :rating %>
   <%= f.number_field :rating, class: :number_field, step: :any %><br>
+  </div>
+  <div class="field">
   <%= f.label :content %>
   <%= f.text_area :content %><br>
+  </div>
+  <div class="field">
   <%= f.label :foodie %>
   <%= f.collection_select :foodie_id, @foodies, :id, :username, prompt: true %><br>
-  <%= f.submit class: "btn btn-secondary btn-lg" %>
+  </div>
+  <%= f.submit class: 'ui black button' %>
 
 <% end %>

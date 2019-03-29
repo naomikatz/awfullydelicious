@@ -15,7 +15,7 @@
   <% @food.reviews.each do |r| %>
     <div class="ui raised link card">
       <div class="content">
-        <div class="header"><%= r.title %></div>
+        <div class="header"><%= link_to r.title, review_path(r) %></div>
         <div class="meta">
           <span class="category"><%= r.rating %></span>
         </div>
@@ -25,7 +25,7 @@
       </div>
       <div class="extra content">
         <div class="right floated">
-          By: <%= r.foodie.username %>
+          <%= r.foodie.username %>
         </div>
       </div>
     </div>
